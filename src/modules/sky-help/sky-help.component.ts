@@ -6,5 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styles: [require('./sky-help.component.scss')]
 })
 export class SkyHelpComponent implements OnInit {
+  public isOpen: boolean = false;
   ngOnInit(): void {}
+  toggleOpen(): void {
+    this.isOpen = !this.isOpen;
+  }
 }
