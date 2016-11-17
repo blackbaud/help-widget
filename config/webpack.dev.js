@@ -1,7 +1,6 @@
 const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common.js');
-const BUILD_PATH = 'dist';
 
 module.exports = webpackMerge(commonConfig, {
 
@@ -18,7 +17,7 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   output: {
-    path: helpers.root(BUILD_PATH),
+    path: helpers.root('dist'),
     filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   }
