@@ -12,5 +12,4 @@ import 'rxjs';
 // Other vendors for example jQuery, Lodash or Bootstrap
 // You can import js, ts, css, sass, ...
 
-//import 'blackbaud-skyux2/dist/css/sky.css';
-//import 'blackbaud-skyux2/dist/core';
+require('blackbaud-skyux2/dist/css/sky.css');
