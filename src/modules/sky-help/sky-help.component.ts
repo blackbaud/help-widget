@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkyHelpComponent implements OnInit {
   public isOpen: boolean = false;
-  ngOnInit(): void {}
-  toggleOpen(): void {
+  public ngOnInit(): void {}
+  public toggleOpen(): void {
     this.isOpen = !this.isOpen;
   }
 }
