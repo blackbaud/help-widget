@@ -6,7 +6,7 @@ $panel-width: 550px;
   box-sizing: border-box;
 }
 
-.bb-help-container {
+.sky-help-container {
   line-height: 1;
   position: fixed;
   top: 0;
@@ -25,7 +25,7 @@ $panel-width: 550px;
   }
 }
 
-.bb-help-invoker {
+.sky-help-invoker {
   background-color: $color-primary;
   color: #fff;
   padding: 15px;
@@ -35,7 +35,8 @@ $panel-width: 550px;
   text-align: left;
   padding-left: 15px;
   float: left;
-  transition: padding-right 250ms, background-color 250ms;
+  opacity: 1;
+  transition: padding-right 250ms, background-color 250ms, opacity 250ms;
 
   &:focus {
     outline: 0;
@@ -61,32 +62,77 @@ $panel-width: 550px;
     text-align: center;
   }
 
+  &.disabled {
+    opacity: 0;
+  }
+
   @media (min-width: $screen-sm) {
     position: absolute;
     right: 100%;
   }
 }
 
-.bb-help-panel {
+.sky-help-panel {
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
-.bb-help-panel-header {
-  line-height: 52px;
+.sky-help-panel-header {
+  height: 52px;
   background-color: $color-primary;
   color: #fff;
   padding: 0 15px;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .form {
+    float: left;
+
+    input[type="text"] {
+      display: block;
+    }
+  }
 }
 
-.bb-help-panel-body {
+.sky-help-panel-body {
   padding: 15px;
 }
 
-.bb-help-panel-footer {
+.sky-help-panel-footer {
   padding: 10px 15px;
   background-color: #f8f8f8;
   font-size: 85%;
+}
+
+.sky-help-navigation {
+  float: right;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  > button {
+    background-color: transparent;
+    display: block;
+    border: 0;
+    color: #fff;
+    float: left;
+    width: 40px;
+    text-align: center;
+    padding: 0 5px;
+    font-size: 1em;
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color-primary, 10%);
+    }
+  }
 }
 
 .menu {
@@ -107,4 +153,38 @@ $panel-width: 550px;
 
     > a {}
   }
+}
+
+.sky-help-input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+
+  > input {
+    display: table-cell;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .sky-help-input-group-button {
+    display: table-cell;
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+
+    > button {
+      z-index: 2;
+      margin-left: -1px;
+      position: relative;
+    }
+  }
+}
+
+.sky-help-button {
+
 }

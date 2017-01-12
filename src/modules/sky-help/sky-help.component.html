@@ -1,32 +1,50 @@
-<div class="bb-help-container" [class.open]="isOpen">
-  <button class="bb-help-invoker" title="Toggle Help" (click)="toggleOpen()">
+<div class="sky-help-container" [class.open]="isOpen">
+  <button class="sky-help-invoker" title="Toggle Help" (click)="toggleOpen()" [class.disabled]="isOpen">
     <i class="icon">?</i>
   </button>
-  <div class="bb-help-panel">
-    <header class="bb-help-panel-header">
-      Header
+  <div class="sky-help-panel">
+    <header class="sky-help-panel-header">
+      <form class="form">
+        <div class="form-group">
+          <label class="sr-only">Search help topics</label>
+          <div class="sky-help-input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="sky-help-input-group-button">
+              <button class="sky-help-button">
+                <i class="fa fa-search"></i><span class="sr-only">Submit</span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </form>
+      <nav class="sky-help-navigation">
+        <button title="Go back"><i class="fa fa-chevron-left"></i><span class="sr-only">Go back</span></button>
+        <button title="Reload page"><i class="fa fa-repeat"></i><span class="sr-only">Reload page</span></button>
+        <button title="Go forward"><i class="fa fa-chevron-right"></i><span class="sr-only">Go forward</span></button>
+        <button title="Close the Help panel" (click)="toggleOpen()"><i class="fa fa-close"></i><span class="sr-only">Close the Help panel</span></button>
+      </nav>
     </header>
-    <div class="bb-help-panel-body">
+    <div class="sky-help-panel-body">
       <div class="page-header">
         <h1>Welcome</h1>
       </div>
     </div>
-    <footer class="bb-help-panel-footer">
+    <footer class="sky-help-panel-footer">
       <ul class="menu">
         <li>
-          <a href="#">Help Center</a>
+          <a href="#"><i class="fa fa-question-circle"></i>Help Center</a>
         </li>
         <li>
-          <a href="#">Community</a>
+          <a href="#"><i class="fa fa-users"></i>Community</a>
         </li>
         <li>
-          <a href="#">Knowledgebase</a>
+          <a href="#"><i class="fa fa-cloud"></i>Knowledgebase</a>
         </li>
         <li>
-          <a href="#">Case Central</a>
+          <a href="#"><i class="fa fa-wrench"></i>Case Central</a>
         </li>
         <li>
-          <a href="#">Chat</a>
+          <a href="#"><i class="fa fa-comments"></i>Chat</a>
         </li>
       </ul>
     </footer>
