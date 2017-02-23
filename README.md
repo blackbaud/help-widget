@@ -1,14 +1,8 @@
-# sky-help
+# Help Widget
 
-## How to run locally
-- This repo utilizes a parent app which consumes the SKY Help Angular module.
-
+## Running locally
 ```
 npm install
+npm run build
 npm start
-```
-
-### Testing
-```
-npm test
 ```
